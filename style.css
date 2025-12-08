@@ -1,0 +1,53 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    /*padding-top: 80px;*/
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/*Justify-contents
+flex-start: Aligns items to the beginning of the container's main axis (default).
+
+center: Centers the items along the main axis.
+
+space-between: Distributes items evenly; the first item is at the start, and the last is at the end.
+
+space-around: Distributes items evenly with equal space around them.
+
+space-evenly: Distributes items such that the spacing between any two adjacent items is equal, and the space before the first item and after the last item is also equal to the intervening space.*/
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    align-items: center;
+    padding: 20px;
+    background: honeydew;
+    color: brown;
+}
+
+nav ul{
+   display: flex;
+   list-style: none; 
+   gap: 25px;
+}
+
+nav ul a{
+    color: brown;
+    text-decoration: none;
+    font-weight: 700px;
+    text-transform: capitalize;
+}
+
+nav ul a:hover{
+    color: blanchedalmond;
+    background: brown;
+}
+
+#contact{
+    margin-right: 45px;
+}
