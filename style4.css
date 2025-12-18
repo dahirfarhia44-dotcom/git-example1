@@ -1,0 +1,73 @@
+.menu-btn {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;    
+}
+
+/*.menu-btn.open .hamburger span {
+    background: transparent;
+}*/
+.menu-btn span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    transition: all .3s ease;
+}
+
+/* This targets only the 2nd span inside the container */
+.menu-btn span:nth-child(2) {
+  width: 70%;       /* Makes it shorter than the others */
+  align-self: flex-end; /* Optional: pushes it to the right side */
+}
+
+/* When .menu-btn is hovered, find the span inside it */
+.menu-btn:hover span {
+  background-color: #007bff; /* A nice bright blue 🔵 */
+}
+
+.menu-links{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    /*start hidden*/
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    border: 1px solid #ddd;
+}
+
+.menu-links.active{
+    display: flex;
+}
+
+.menu-links li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  display: block;
+}
+
+.menu-links li a:hover {
+  background-color: #eee;
+}
+
+/* 1. Hide the middle line */
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+/* 2. Rotate the top line */
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+
+/* 3. Rotate the bottom line */
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
+}
